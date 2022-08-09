@@ -15,7 +15,7 @@ const Banner = () => {
 
     return (
         <VStack flexGrow={1} justify={'center'} spacing={8} paddingX={8}>
-            <Heading ref={textColored} className='gradient' maxWidth={'30ch'} textAlign={'center'}>Nouer des liens avec votre clientèle au travers d'expériences inédites.</Heading>
+            <Heading ref={textColored} className='gradient' maxWidth={'30ch'} textAlign={'center'}>Nouer des liens avec votre clientèle au travers d&apos;expériences inédites.</Heading>
             <Wrap justify={'center'} align={'center'}>
                 <Button colorScheme='black' variant='ghost'>Start designing</Button>
                 <Button colorScheme='black' variant='ghost'>Start developing</Button>

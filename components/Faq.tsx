@@ -42,7 +42,7 @@ const Faq = () => {
                     <Heading>
                         <AccordionButton paddingX={0} gap={4}>
                             <Box flex='1' textAlign='left'>
-                                Je n’ai pas le temps de créer un deck de 78 cartes mais je souhaite quand même contribuer/participer au projet :
+                                Je n&apos;ai pas le temps de créer un deck de 78 cartes mais je souhaite quand même contribuer/participer au projet :
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -87,17 +87,17 @@ const Faq = () => {
                     <Heading>
                         <AccordionButton paddingX={0} gap={4}>
                             <Box flex='1' textAlign='left'>
-                                Est-ce que c'est aux artistes de faire la communication de leur deck ?
+                                Est-ce que c&apos;est aux artistes de faire la communication de leur deck ?
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                     </Heading>
                     <AccordionPanel pb={4}>
-                        L’objectif de ce projet est de créer une communauté autour de ce dernier. La communication autour de ce projet doit donc se faire de plusieurs manières et par plusieurs canaux :
-                        Tout d’abord concernant les marques/sponsors/investisseurs, nous nous chargerons de promouvoir le projet et les artistes pour attirer ce type d’acteur.
+                        L&apos;objectif de ce projet est de créer une communauté autour de ce dernier. La communication autour de ce projet doit donc se faire de plusieurs manières et par plusieurs canaux :
+                        Tout d&apos;abord concernant les marques/sponsors/investisseurs, nous nous chargerons de promouvoir le projet et les artistes pour attirer ce type d’acteur.
                         Nous nous chargeons également de promouvoir votre travail directement sur nos plateformes (les différents jeux, discord…) en vous créditant de manière ostensible.
-                        Cependant, afin de favoriser l’effet réseau et la construction d’une communauté, vous pouvez activer votre réseau personnel pour permettre à d’autres artistes / utilisateurs de rejoindre le projet et de faire partie de la communauté.
-                        Vous pouvez également faire votre propre publicité pour vendre directement vos NFTs sur d’autres plateformes sans passer par le projet
+                        Cependant, afin de favoriser l&apos;effet réseau et la construction d&apos;une communauté, vous pouvez activer votre réseau personnel pour permettre à d’autres artistes / utilisateurs de rejoindre le projet et de faire partie de la communauté.
+                        Vous pouvez également faire votre propre publicité pour vendre directement vos NFTs sur d&apos;autres plateformes sans passer par le projet
                     </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem>
@@ -110,11 +110,11 @@ const Faq = () => {
                         </AccordionButton>
                     </Heading>
                     <AccordionPanel pb={4}>
-                        Pour terminer cette FAQ, il nous semble essentiel de revenir sur l’intérêt de ce projet, que ce soit pour vous, pour nous, pour les utilisateurs ou encore pour les marques. Nous avons pensé ce projet dans l’objectif de mettre à disposition un protocole et un framework permettant à des organisations d'interagir et de fédérer leurs communautés de manière ludique via des technologies web3 (blockchain, NFTs, dApp, DAO). Ce projet à pour objectif de répondre aux des différents acteurs de l'écosystème que nous souhaitons créer :
-                        Les marques : de nombreuses marques cherchent à s’intégrer dans l’univers des cryptomonnaies et des NFTs, mais ne savent pas forcément par quelle porte y entrer. Leur objectif est également de fédérer une communauté de clients autour de leurs produits et de leur image. Nous leur proposons donc de créer une crypto-identité via notre plateforme, sur laquelle ils pourront créer des decks de NFTs et des jeux à l'effigie de leurs produits et de leur identité visuelle ainsi que de réunir leurs utilisateurs et de récompenser leur participation à la vie de la marque via des cadeaux.
-                        Les utilisateurs : les utilisateurs de notre plateforme pourront jouer à des jeux, faire partie d’une communauté, participer activement à la vie de leur marque favorite et être récompensé via des NFTs pour cette participation. Cela leur offre l’opportunité de collectionner, d’échanger et de vendre ces NFTs de manière ludique, tout en spéculant sur la valeur de ces derniers afin de potentiellement s’enrichir.
-                        Les artistes : les artistes participant au projet auront, pour ceux n’étant pas déjà familier avec le monde de la crypto, un accompagnement pour leur permettre de découvrir et d’investir ce nouveau moyen de partager et de vendre leur art. Ils auront également une forte visibilité, que ce soit auprès du public ou auprès des marques qui s’engageront dans le projet. Pour finir, ils auront également la rétribution pécuniaire stipulée ci-dessus.
-                        Blockness : ce projet nous permettra de montrer ce que le collectif est capable de produire. Il permettra également d'agrandir et d’étendre le collectif à différents types d’acteurs de l’univers de la crypto. Pour finir, il permettra de former avec des marques une relation de confiance pour d’éventuels projets futurs, mais aussi d’attirer de nouveaux clients.
+                        Pour terminer cette FAQ, il nous semble essentiel de revenir sur l&apos;intérêt de ce projet, que ce soit pour vous, pour nous, pour les utilisateurs ou encore pour les marques. Nous avons pensé ce projet dans l&apos;objectif de mettre à disposition un protocole et un framework permettant à des organisations d&apos;interagir et de fédérer leurs communautés de manière ludique via des technologies web3 (blockchain, NFTs, dApp, DAO). Ce projet à pour objectif de répondre aux des différents acteurs de l'écosystème que nous souhaitons créer :
+                        Les marques : de nombreuses marques cherchent à s&apos;intégrer dans l&apos;univers des cryptomonnaies et des NFTs, mais ne savent pas forcément par quelle porte y entrer. Leur objectif est également de fédérer une communauté de clients autour de leurs produits et de leur image. Nous leur proposons donc de créer une crypto-identité via notre plateforme, sur laquelle ils pourront créer des decks de NFTs et des jeux à l'effigie de leurs produits et de leur identité visuelle ainsi que de réunir leurs utilisateurs et de récompenser leur participation à la vie de la marque via des cadeaux.
+                        Les utilisateurs : les utilisateurs de notre plateforme pourront jouer à des jeux, faire partie d&apos;une communauté, participer activement à la vie de leur marque favorite et être récompensé via des NFTs pour cette participation. Cela leur offre l&apos;opportunité de collectionner, d&apos;échanger et de vendre ces NFTs de manière ludique, tout en spéculant sur la valeur de ces derniers afin de potentiellement s&apos;enrichir.
+                        Les artistes : les artistes participant au projet auront, pour ceux n&apos;étant pas déjà familier avec le monde de la crypto, un accompagnement pour leur permettre de découvrir et d&apos;investir ce nouveau moyen de partager et de vendre leur art. Ils auront également une forte visibilité, que ce soit auprès du public ou auprès des marques qui s&apos;engageront dans le projet. Pour finir, ils auront également la rétribution pécuniaire stipulée ci-dessus.
+                        Blockness : ce projet nous permettra de montrer ce que le collectif est capable de produire. Il permettra également d'agrandir et d&apos;étendre le collectif à différents types d&apos;acteurs de l&apos;univers de la crypto. Pour finir, il permettra de former avec des marques une relation de confiance pour d’éventuels projets futurs, mais aussi d&apos;attirer de nouveaux clients.
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>

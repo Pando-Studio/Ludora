@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, VStack } from '@chakra-ui/react'
+import { Box, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
@@ -47,15 +47,6 @@ const Banner = () => {
                 height: container.current.offsetHeight * 80 / 100,
             }
 
-            window.addEventListener('resize', () => {
-                sizes.width = window.innerWidth
-                sizes.height = window.innerHeight
-                camera.aspect = sizes.width / sizes.height
-                camera.updateProjectionMatrix()
-                renderer.setSize(sizes.width, sizes.height)
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-            })
-
             // Camera
             const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
             camera.position.x = 0
@@ -89,10 +80,10 @@ const Banner = () => {
     }, [])
 
     return (
-        <HStack ref={container} flexGrow={1} justify={'center'} spacing={8} paddingX={8}>
+        <Wrap ref={container} flexGrow={1} justify={'center'} align={'center'} spacing={8} paddingX={8}>
             <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
             <canvas ref={canvas}></canvas>
-        </HStack>
+        </Wrap>
     )
 }
 

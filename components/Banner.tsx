@@ -43,8 +43,8 @@ const Banner = () => {
 
             // Sizes
             const sizes = {
-                width: container.current.offsetWidth * 25 / 100,
-                height: container.current.offsetHeight * 80 / 100,
+                width: 400,
+                height: 600,
             }
 
             // Camera

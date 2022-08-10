@@ -85,7 +85,7 @@ const Banner = () => {
                 <GridItem>
                     <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
                 </GridItem>
-                <GridItem ref={container} minHeight={500}>
+                <GridItem ref={container} minHeight={500} zIndex={{base: -1, lg: 9999}}>
                     <canvas ref={canvas}></canvas>
                 </GridItem>
             </Grid>

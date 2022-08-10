@@ -20,6 +20,7 @@ const Banner = () => {
     useEffect(() => {
         if (container.current && canvas.current) {
             const scene = new THREE.Scene();
+
             //Texture
             const textureLoader = new THREE.TextureLoader()
             const colorTexture = textureLoader.load('/card.jpg')
@@ -27,7 +28,7 @@ const Banner = () => {
             colorTexture.minFilter = THREE.NearestFilter
             colorTexture.magFilter = THREE.NearestFilter
 
-            //Object
+            //Geometry
             const geometry1 = new THREE.PlaneGeometry(1, 2, 1)
             const material1 = new THREE.MeshBasicMaterial({ map: colorTexture })
             const mesh1 = new THREE.Mesh(geometry1, material1)
@@ -54,11 +55,6 @@ const Banner = () => {
             camera.position.z = 2
             scene.add(camera)
 
-            // Controls
-            const controls = new OrbitControls(camera, canvas.current)
-            controls.enableDamping = true;
-            controls.enableZoom = false;
-
             // Renderer
             const renderer = new THREE.WebGLRenderer({
                 canvas: canvas.current
@@ -71,7 +67,6 @@ const Banner = () => {
             const animate = () => {
                 mesh1.rotation.y += 0.01;
                 mesh2.rotation.y += 0.01;
-                controls.update()
                 renderer.render(scene, camera)
                 window.requestAnimationFrame(animate)
             }
@@ -85,7 +80,7 @@ const Banner = () => {
                 <GridItem>
                     <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
                 </GridItem>
-                <GridItem ref={container} minHeight={500} zIndex={{base: -1, lg: 9999}}>
+                <GridItem ref={container} minHeight={500} zIndex={{ base: -1, lg: 9999 }}>
                     <canvas ref={canvas}></canvas>
                 </GridItem>
             </Grid>

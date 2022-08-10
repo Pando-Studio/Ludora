@@ -72,7 +72,7 @@ const Banner = () => {
     }, [])
 
     return (
-        <Container flexGrow={1} maxWidth={'6xl'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+        <Container flexGrow={1} maxWidth={'6xl'} display={'flex'} justifyContent={'center'} alignItems={'center'} mb={16}>
             <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "70% 30%" }}>
                 <GridItem>
                     <Heading ref={heading} className='gradient' marginTop={{ base: 8, lg: 0 }} textAlign={{ base: 'center', lg: 'left' }}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>

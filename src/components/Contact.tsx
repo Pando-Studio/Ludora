@@ -1,17 +1,16 @@
 import { Center, Container, Heading } from '@chakra-ui/react'
-import React, { useEffect, useRef } from 'react'
-import { getRandomGradient } from '../utilities';
+import React, { useContext, useEffect, useRef } from 'react'
 import gsap from 'gsap';
+import { GradientContext } from '../pages';
 
 
 const Contact = () => {
 
+  const gradient = useContext(GradientContext);
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    setInterval(() => {
-      gsap.to(heading.current, { backgroundImage: getRandomGradient })
-    }, 4000)
-  }, [heading])
+      gsap.to(heading.current, { backgroundImage: gradient })
+  }, [gradient])
 
   return (
     <Container>

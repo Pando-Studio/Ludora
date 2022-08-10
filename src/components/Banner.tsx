@@ -1,17 +1,16 @@
-import { Box, Flex, Grid, GridItem, Heading } from '@chakra-ui/react'
-import React, { useEffect, useRef, useState } from 'react'
+import { Box, Container, Flex, Grid, GridItem, Heading } from '@chakra-ui/react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
-import { getRandomGradient } from '../utilities';
+import { GradientContext } from '../pages';
 
 const Banner = () => {
 
+    const gradient = useContext(GradientContext);
     const heading = useRef<HTMLHeadingElement>(null);
     useEffect(() => {
-        setInterval(() => {
-            gsap.to(heading.current, { backgroundImage: getRandomGradient })
-        }, 4000)
-    }, [heading])
+        gsap.to(heading.current, { backgroundImage: gradient })
+    }, [gradient])
 
     const canvas = useRef(null);
     const container = useRef<HTMLDivElement>(null);
@@ -27,11 +26,11 @@ const Banner = () => {
             colorTexture.magFilter = THREE.NearestFilter
 
             //Geometry
-            const geometry1 = new THREE.PlaneGeometry(1, 2, 1)
+            const geometry1 = new THREE.PlaneGeometry(1.2, 2, 1)
             const material1 = new THREE.MeshBasicMaterial({ map: colorTexture })
             const mesh1 = new THREE.Mesh(geometry1, material1)
 
-            const geometry2 = new THREE.PlaneGeometry(1, 2, 1)
+            const geometry2 = new THREE.PlaneGeometry(1.2, 2, 1)
             const material2 = new THREE.MeshBasicMaterial({ map: colorTexture })
             const mesh2 = new THREE.Mesh(geometry2, material2)
 
@@ -73,15 +72,17 @@ const Banner = () => {
     }, [])
 
     return (
-        <Flex flexGrow={1} justify={'center'} align={'center'} paddingX={8}>
-            <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "80% 20%" }}>
-                <GridItem>
-                    <Heading ref={heading} className='gradient' maxWidth={'30ch'} marginTop={{base: 8, lg: 0}}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
-                </GridItem>
-                <GridItem ref={container} minHeight={500}>
-                    <canvas ref={canvas}></canvas>
-                </GridItem>
-            </Grid>
+        <Flex flexGrow={1} justify={'center'} align={'center'}>
+            <Container maxWidth={'6xl'}>
+                <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "70% 30%" }}>
+                    <GridItem>
+                        <Heading ref={heading} className='gradient' maxWidth={'30ch'} marginTop={{ base: 8, lg: 0 }}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
+                    </GridItem>
+                    <GridItem ref={container} minHeight={500}>
+                        <canvas ref={canvas}></canvas>
+                    </GridItem>
+                </Grid>
+            </Container>
         </Flex >
     )
 }

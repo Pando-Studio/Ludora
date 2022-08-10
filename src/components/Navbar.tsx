@@ -1,4 +1,4 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, Heading, HStack, Link, useDisclosure } from '@chakra-ui/react'
+import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, Heading, HStack, Link, useDisclosure, VStack } from '@chakra-ui/react'
 import React, { useRef } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
@@ -21,7 +21,6 @@ const Navbar = () => {
             <Drawer
                 isOpen={isOpen}
                 placement='top'
-                size='xl'
                 onClose={onClose}
                 finalFocusRef={btnRef}
             >
@@ -29,7 +28,12 @@ const Navbar = () => {
                 <DrawerContent background={'#fff'}>
                     <DrawerCloseButton top={4} right={4} size='lg' />
                     <DrawerBody>
-                        blabla
+                        <VStack>
+                            <Button><Link href='#project'>Project</Link></Button>
+                            <Button><Link href='#faq'>Faq</Link></Button>
+                            <Button><Link href='#team'>Team</Link></Button>
+                            <Button><Link href='#contact'>Contact</Link></Button>
+                        </VStack>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

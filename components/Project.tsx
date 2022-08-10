@@ -1,10 +1,20 @@
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { getRandomGradient } from '../utilities';
+import gsap from 'gsap';
 
 const Project = () => {
+
+    const heading = useRef<HTMLHeadingElement>(null);
+    useEffect(() => {
+        setInterval(() => {
+            gsap.to(heading.current, { backgroundImage: getRandomGradient })
+        }, 4000)
+    }, [heading])
+
     return (
         <Container maxWidth={'6xl'} pb={16}>
-            <Heading textAlign={'center'} mb={8}>Le project</Heading>
+            <Heading ref={heading} className='gradient' textAlign={'center'} mb={8}>Le project</Heading>
             <Text mb={4}>
                 L&apos;objectif du projet est de créer et de mettre à disposition de tous un protocole et un framework permettant à des organisations d&apos;interagir et de fédérer leurs communautés de manière ludique via des technologies web3 (blockchain, NFTs, dApp, DAO).
             </Text>

@@ -1,10 +1,20 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Container, Heading } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { getRandomGradient } from '../utilities';
+import gsap from 'gsap';
 
 const Faq = () => {
+
+    const heading = useRef<HTMLHeadingElement>(null);
+    useEffect(() => {
+        setInterval(() => {
+            gsap.to(heading.current, { backgroundImage: getRandomGradient })
+        }, 4000)
+    }, [heading])
+    
     return (
         <Container maxWidth={'6xl'} pb={16}>
-            <Heading textAlign={'center'} mb={8}>FAQ</Heading>
+            <Heading ref={heading} className='gradient' textAlign={'center'} mb={8}>FAQ</Heading>
             <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                     <Heading>

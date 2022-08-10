@@ -22,8 +22,8 @@ const Navbar = () => {
             <HamburgerIcon w={7} h={7} ref={btnRef} onClick={onOpen} display={{ base: 'inherit', md: 'none' }} cursor={'pointer'} />
             <Drawer
                 isOpen={isOpen}
-                placement='bottom'
-                size='full'
+                placement='top'
+                size='xl'
                 onClose={onClose}
                 finalFocusRef={btnRef}
             >
@@ -31,6 +31,7 @@ const Navbar = () => {
                 <DrawerContent background={'#fff'}>
                     <DrawerCloseButton top={4} right={4} size='lg' />
                     <DrawerBody>
+                        blabla
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

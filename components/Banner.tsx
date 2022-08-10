@@ -1,19 +1,17 @@
-import { Box, Flex, Grid, GridItem, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Heading } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { getRandomGradient } from '../utilities';
 
 const Banner = () => {
 
-    const textColored = useRef<HTMLHeadingElement>(null);
-    const rdm = () => Math.floor(Math.random() * 200);
+    const heading = useRef<HTMLHeadingElement>(null);
     useEffect(() => {
         setInterval(() => {
-            const gradient = `linear-gradient(45deg, rgb(${rdm()},${rdm()},${rdm()}), rgb(${rdm()},${rdm()},${rdm()}))`;
-            gsap.to(textColored.current, { backgroundImage: gradient })
+            gsap.to(heading.current, { backgroundImage: getRandomGradient })
         }, 4000)
-    }, [textColored])
+    }, [heading])
 
     const canvas = useRef(null);
     const container = useRef<HTMLDivElement>(null);
@@ -78,9 +76,9 @@ const Banner = () => {
         <Flex flexGrow={1} justify={'center'} align={'center'} paddingX={8}>
             <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "80% 20%" }}>
                 <GridItem>
-                    <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
+                    <Heading ref={heading} className='gradient' maxWidth={'30ch'} marginTop={{base: 8, lg: 0}}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
                 </GridItem>
-                <GridItem ref={container} minHeight={500} zIndex={{ base: -1, lg: 9999 }}>
+                <GridItem ref={container} minHeight={500}>
                     <canvas ref={canvas}></canvas>
                 </GridItem>
             </Grid>

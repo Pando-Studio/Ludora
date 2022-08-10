@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
@@ -43,8 +43,8 @@ const Banner = () => {
 
             // Sizes
             const sizes = {
-                width: 400,
-                height: 600,
+                width: container.current.offsetWidth,
+                height: container.current.offsetHeight,
             }
 
             // Camera
@@ -80,11 +80,15 @@ const Banner = () => {
     }, [])
 
     return (
-        <Flex ref={container} flexGrow={1} justify={'center'} align={'center'} paddingX={8}>
-            <Wrap justify={'center'} align={'center'} marginTop={{ base: 8, lg: 0 }}>
-                <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
-                <canvas ref={canvas}></canvas>
-            </Wrap >
+        <Flex flexGrow={1} justify={'center'} align={'center'} paddingX={8}>
+            <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "80% 20%" }}>
+                <GridItem>
+                    <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
+                </GridItem>
+                <GridItem ref={container} minHeight={500}>
+                    <canvas ref={canvas}></canvas>
+                </GridItem>
+            </Grid>
         </Flex >
     )
 }

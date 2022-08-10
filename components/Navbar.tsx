@@ -10,13 +10,14 @@ const Navbar = () => {
         <Flex justify={'space-between'} align={'center'} paddingX={8} paddingY={4} boxShadow={'inset 0 -1px 0 0 rgba(0,0,0,.1)'}>
             <Heading as={'h1'}>Ludora</Heading>
             <HStack display={{ base: 'none', md: 'flex' }}>
-                <NextLink href='/project'><Link>Project</Link></NextLink>
-                <NextLink href='/roadmap'><Link>Roadmap</Link></NextLink>
+                <NextLink href='/project'><Link>Home</Link></NextLink>
+                <NextLink href='/project'><Link>Projet</Link></NextLink>
+                <NextLink href='/project'><Link>Faq</Link></NextLink>
                 <NextLink href='/team'><Link>Team</Link></NextLink>
                 <NextLink href='/contact'><Link>Contact</Link></NextLink>
             </HStack>
             <HStack display={{ base: 'none', md: 'flex' }}>
-                <Link sx={{ backgroundColor: 'black', color: 'white', paddingX: 4, paddingY: 2, borderRadius: '1rem' }}>Connect</Link>
+                <Link sx={{ backgroundColor: 'black', color: 'white', paddingX: 4, paddingY: 2, borderRadius: '1rem' }}>Contact</Link>
             </HStack>
             <HamburgerIcon w={7} h={7} ref={btnRef} onClick={onOpen} display={{ base: 'inherit', md: 'none' }} cursor={'pointer'} />
             <Drawer

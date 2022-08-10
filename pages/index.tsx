@@ -2,7 +2,11 @@ import { Box, Container, Flex, Img, VStack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Banner from '../components/Banner'
+import Contact from '../components/Contact'
+import Faq from '../components/Faq'
 import Navbar from '../components/Navbar'
+import Project from '../components/Project'
+import Team from '../components/Team'
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +19,12 @@ const Home: NextPage = () => {
       <main>
         <Flex direction={'column'} minHeight={'100vh'}>
           <Navbar></Navbar>
-          <Banner></Banner> 
+          <Banner></Banner>
         </Flex>
+        <Project></Project>
+        <Faq></Faq>
+        <Team></Team>
+        <Contact></Contact>
       </main>
     </>
   )

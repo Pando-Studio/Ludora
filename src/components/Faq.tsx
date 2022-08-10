@@ -13,7 +13,7 @@ const Faq = () => {
 
     return (
         <Container id='faq' maxWidth={'6xl'} pb={16}>
-            <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={16}>FAQ</Heading>
+            <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={8}>FAQ</Heading>
             <Accordion allowToggle>
                 <AccordionItem>
                     <AccordionButton paddingX={0} gap={4}>

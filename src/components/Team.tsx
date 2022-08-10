@@ -13,7 +13,7 @@ const Team = () => {
 
   return (
     <Container id='team' maxWidth={'6xl'} mb={16}>
-      <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={16}>Team</Heading>
+      <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={8}>Team</Heading>
       <Wrap justify={'center'} align={'center'}>
         <Text>Yacine Arhaliass</Text>
         <Text>-</Text>

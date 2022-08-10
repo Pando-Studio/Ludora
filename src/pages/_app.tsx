@@ -3,13 +3,14 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react"
 import '@fontsource/montserrat'
+import '@fontsource/roboto'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   const theme = extendTheme({
     fonts: {
       heading: 'Montserrat',
-      body: 'Montserrat',
+      body: 'Roboto',
     },
     styles: {
       global: () => ({

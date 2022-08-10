@@ -14,7 +14,7 @@ const Contact = () => {
 
   return (
     <Container id='contact' maxWidth={'6xl'}>
-      <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={16}>Contact</Heading>
+      <Heading ref={heading} className='gradient' fontSize={'5xl'} textAlign={'center'} mb={8}>Contact</Heading>
       <Center mb={16}><Link href="mailto:yacine@blockness.com">yacine@blockness.com</Link></Center>
     </Container>
   )

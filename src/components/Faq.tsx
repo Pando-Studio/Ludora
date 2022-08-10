@@ -12,8 +12,8 @@ const Faq = () => {
     }, [gradient])
 
     return (
-        <Container maxWidth={'6xl'} pb={16}>
-            <Heading ref={heading} className='gradient' textAlign={'center'} mb={8}>Je suis designer</Heading>
+        <Container id='faq' maxWidth={'6xl'} pb={16}>
+            <Heading ref={heading} className='gradient' textAlign={'center'} mb={16}>FAQ</Heading>
             <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                     <Heading>
@@ -118,7 +118,7 @@ const Faq = () => {
                             <AccordionIcon />
                         </AccordionButton>
                     </Heading>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel>
                         Pour terminer cette FAQ, il nous semble essentiel de revenir sur l&apos;intérêt de ce projet, que ce soit pour vous, pour nous, pour les utilisateurs ou encore pour les marques. Nous avons pensé ce projet dans l&apos;objectif de mettre à disposition un protocole et un framework permettant à des organisations d&apos;interagir et de fédérer leurs communautés de manière ludique via des technologies web3 (blockchain, NFTs, dApp, DAO). Ce projet à pour objectif de répondre aux des différents acteurs de l&apos;écosystème que nous souhaitons créer :
                         Les marques : de nombreuses marques cherchent à s&apos;intégrer dans l&apos;univers des cryptomonnaies et des NFTs, mais ne savent pas forcément par quelle porte y entrer. Leur objectif est également de fédérer une communauté de clients autour de leurs produits et de leur image. Nous leur proposons donc de créer une crypto-identité via notre plateforme, sur laquelle ils pourront créer des decks de NFTs et des jeux à l&apos;effigie de leurs produits et de leur identité visuelle ainsi que de réunir leurs utilisateurs et de récompenser leur participation à la vie de la marque via des cadeaux.
                         Les utilisateurs : les utilisateurs de notre plateforme pourront jouer à des jeux, faire partie d&apos;une communauté, participer activement à la vie de leur marque favorite et être récompensé via des NFTs pour cette participation. Cela leur offre l&apos;opportunité de collectionner, d&apos;échanger et de vendre ces NFTs de manière ludique, tout en spéculant sur la valeur de ces derniers afin de potentiellement s&apos;enrichir.

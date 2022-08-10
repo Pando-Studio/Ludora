@@ -72,18 +72,16 @@ const Banner = () => {
     }, [])
 
     return (
-        <Flex flexGrow={1} justify={'center'} align={'center'}>
-            <Container maxWidth={'6xl'}>
-                <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "70% 30%" }}>
-                    <GridItem>
-                        <Heading ref={heading} className='gradient' maxWidth={'30ch'} marginTop={{ base: 8, lg: 0 }}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
-                    </GridItem>
-                    <GridItem ref={container} minHeight={500}>
-                        <canvas ref={canvas}></canvas>
-                    </GridItem>
-                </Grid>
-            </Container>
-        </Flex >
+        <Container flexGrow={1} maxWidth={'6xl'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+            <Grid justifyItems={'center'} alignItems={'center'} templateColumns={{ base: "1fr", lg: "70% 30%" }}>
+                <GridItem>
+                    <Heading ref={heading} className='gradient' maxWidth={'30ch'} marginTop={{ base: 8, lg: 0 }}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
+                </GridItem>
+                <GridItem ref={container} minHeight={500}>
+                    <canvas ref={canvas}></canvas>
+                </GridItem>
+            </Grid>
+        </Container>
     )
 }
 

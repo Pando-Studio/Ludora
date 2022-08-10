@@ -19,6 +19,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         },
       }),
     },
+    colors: {
+      black: {
+        500: "#000000", 
+      }
+    }
   })
 
   return (

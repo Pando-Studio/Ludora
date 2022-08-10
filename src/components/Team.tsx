@@ -8,21 +8,28 @@ const Team = () => {
   const gradient = useContext(GradientContext);
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-      gsap.to(heading.current, { backgroundImage: gradient })
+    gsap.to(heading.current, { backgroundImage: gradient })
   }, [gradient])
 
   return (
-    <Container maxWidth={'6xl'} pb={16}>
-      <Heading ref={heading} className='gradient' textAlign={'center'} mb={8}>Team</Heading>
-      <Wrap>
+    <Container id='team' maxWidth={'6xl'} mb={16}>
+      <Heading ref={heading} className='gradient' textAlign={'center'} mb={16}>Team</Heading>
+      <Wrap justify={'center'} align={'center'}>
         <Text>Yacine Arhaliass</Text>
+        <Text>-</Text>
         <Text>Alexandre Mahé</Text>
+        <Text>-</Text>
         <Text>Clément Verger</Text>
+        <Text>-</Text>
         <Text>Thomas Aurain</Text>
+        <Text>-</Text>
         <Text>Antonin Bouard</Text>
+        <Text>-</Text>
+        <Text>Justine Quirin</Text>
+        <Text>-</Text>
+        <Text>Julien</Text>
       </Wrap>
     </Container>
-
   )
 }
 

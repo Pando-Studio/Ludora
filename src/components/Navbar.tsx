@@ -28,11 +28,11 @@ const Navbar = () => {
                 <DrawerContent background={'#fff'}>
                     <DrawerCloseButton top={4} right={4} size='lg' />
                     <DrawerBody>
-                        <VStack>
-                            <Button><Link href='#project'>Project</Link></Button>
-                            <Button><Link href='#faq'>Faq</Link></Button>
-                            <Button><Link href='#team'>Team</Link></Button>
-                            <Button><Link href='#contact'>Contact</Link></Button>
+                        <VStack py={8} spacing={8}>
+                            <Link href='#project'>Project</Link>
+                            <Link href='#faq'>Faq</Link>
+                            <Link href='#team'>Team</Link>
+                            <Link href='#contact'>Contact</Link>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>

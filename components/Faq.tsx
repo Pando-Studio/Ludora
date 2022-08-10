@@ -10,13 +10,13 @@ const Faq = () => {
                     <Heading>
                         <AccordionButton paddingX={0} gap={4}>
                             <Box flex='1' textAlign='left'>
-                                Je ne suis pas familier avec l’univers des crypto et du web3 : Comment connaître/estimer la valeur de son art ? Comment convertir son art sous forme de NFT? Comment savoir combien d'exemplaires de mon NFT minter ?
+                                Je ne suis pas familier avec l&apos;univers des crypto et du web3 : Comment connaître/estimer la valeur de son art ? Comment convertir son art sous forme de NFT? Comment savoir combien d&apos;exemplaires de mon NFT minter ?
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                     </Heading>
                     <AccordionPanel pb={4}>
-                        Le collectif Blockness sera là pour vous accompagner, vous transmettre nos connaissances et pour vous aider à apprendre à utiliser les outils. Nous mettons l'accent sur la collaboration au sein du collectif et de l'écosystème afin de permettre aux acteurs de se familiariser avec la blockchain.
+                        Le collectif Blockness sera là pour vous accompagner, vous transmettre nos connaissances et pour vous aider à apprendre à utiliser les outils. Nous mettons l&apos;accent sur la collaboration au sein du collectif et de l&apos;écosystème afin de permettre aux acteurs de se familiariser avec la blockchain.
                         Un lexique contenant la définition et l’explication des termes techniques est également mis à disposition dans le channel annonce.
                     </AccordionPanel>
                 </AccordionItem>
@@ -32,10 +32,10 @@ const Faq = () => {
                     <AccordionPanel pb={4}>
                         Afin de partir sur une base commune, quelques normes sont à respectées lors de la création de vos decks :
                         elles doivent respecter le format carte de tarot (ratio de 60/113)
-                        vous pouvez choisir d'ajouter ou non une bordure ou encore un bandeau pour le nom de la carte c'est assez libre de ce côté
+                        vous pouvez choisir d&apos;ajouter ou non une bordure ou encore un bandeau pour le nom de la carte c&apos;est assez libre de ce côté
                         pour les transformer en NFTs elles devront être scannées en haute qualité
                         chaque carte de votre deck devra correspondre à une carte du jeu de tarot original (atout de 0 à 21 ou une des 56 cartes de base)
-                        concernant la couleur (cœur, trèfle, pique, carreau) vous pouvez en créer des nouvelles tant qu'il y a en 4 contenant chacune les cartes allant de 1 à 10, le valet, le cavalier, la dame et le roi.
+                        concernant la couleur (cœur, trèfle, pique, carreau) vous pouvez en créer des nouvelles tant qu&apos;il y a en 4 contenant chacune les cartes allant de 1 à 10, le valet, le cavalier, la dame et le roi.
                     </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem>

@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, VStack, Wrap } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
@@ -80,10 +80,12 @@ const Banner = () => {
     }, [])
 
     return (
-        <Wrap ref={container} flexGrow={1} justify={'center'} align={'center'} spacing={8} paddingX={8}>
-            <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
-            <canvas ref={canvas}></canvas>
-        </Wrap>
+        <Flex ref={container} flexGrow={1} justify={'center'} align={'center'} paddingX={8}>
+            <Wrap justify={'center'} align={'center'} marginTop={{ base: 8, lg: 0 }}>
+                <Heading ref={textColored} className='gradient' maxWidth={'30ch'}>Tisser des liens avec votre clientèle au travers d&apos;expériences inédites basé sur le jeux de tarot.</Heading>
+                <canvas ref={canvas}></canvas>
+            </Wrap >
+        </Flex >
     )
 }
 
